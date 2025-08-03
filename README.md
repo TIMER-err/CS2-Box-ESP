@@ -3,6 +3,8 @@
 An external Box ESP for Counter-Strike 2 written in C++.
 For educational purposes only.
 
+<img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/8c51ad9d-867e-401d-84d0-2967962dba55" />
+
 ## Features
 
 - Draws boxes around players (enemies and teammates)
