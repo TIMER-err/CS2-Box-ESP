@@ -1,0 +1,7 @@
+﻿  ESP.cpp
+  main.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 125 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  ESP.vcxproj -> C:\Users\traps\source\repos\ESP\x64\Release\ESP.exe
