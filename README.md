@@ -16,6 +16,8 @@ A simple Box ESP for Counter-Strike 2 running on Windows, for educational purpos
 powershell:
 
 ```bash
+git clone https://github.com/TIMER-err/CS2-Box-ESP
+cd CS2-Box-ESP
 cmake . -G "Ninja" -B build
 cd build
 ninja -j($env:NUMBER_OF_PROCESSORS)
@@ -24,6 +26,8 @@ ninja -j($env:NUMBER_OF_PROCESSORS)
 cmd:
 
 ```bash
+git clone https://github.com/TIMER-err/CS2-Box-ESP
+cd CS2-Box-ESP
 cmake . -G "Ninja" -B build
 cd build
 ninja -j%NUMBER_OF_PROCESSORS%
