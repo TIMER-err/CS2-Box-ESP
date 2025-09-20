@@ -40,4 +40,5 @@ ninja -j%NUMBER_OF_PROCESSORS%
 4.  Run `main.exe`, and the ESP should be working.
 
 # Credits
-This project is based on the work from [Cr0mb/CS2-Box-ESP](https://github.com/Cr0mb/CS2-Box-ESP/).
+*   This project is based on the work from [Cr0mb/CS2-Box-ESP](https://github.com/Cr0mb/CS2-Box-ESP/).
+*   [nlohmann/json](https://github.com/nlohmann/json) for the excellent C++ JSON library used to parse offsets.
