@@ -13,15 +13,25 @@ A simple Box ESP for Counter-Strike 2 running on Windows, for educational purpos
 
 # Build
 
+powershell:
+
 ```bash
 cmake . -G "Ninja" -B build
 cd build
 ninja -j($env:NUMBER_OF_PROCESSORS)
 ```
 
+cmd:
+
+```bash
+cmake . -G "Ninja" -B build
+cd build
+ninja -j%NUMBER_OF_PROCESSORS%
+```
+
 # Usage
 1.  Launch `cs2.exe` and make sure your game is displayed in **Windowed Maximized** mode.
-2.  Download the latest `offsets.json` and `client.dll.json` files from the [a2x/cs2-dumper GitHub repository](https://github.com/a2x/cs2-dumper).
+2.  Download the latest `offsets.json` and `client.dll.json` files from [a2x/cs2-dumper](https://github.com/a2x/cs2-dumper/tree/main/output).
 3.  Place both of the downloaded `.json` files in the **same folder** as the compiled `main.exe`.
 4.  Run `main.exe`, and the ESP should be working.
 
