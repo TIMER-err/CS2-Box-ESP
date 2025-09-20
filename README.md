@@ -1,42 +1,29 @@
-# CS2 Box ESP
+# Simple CS2 Box ESP
 
-An external Box ESP for Counter-Strike 2 written in C++.
-For educational purposes only.
+A simple Box ESP for Counter-Strike 2 running on Windows, for educational purposes only.
 
-<img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/8c51ad9d-867e-401d-84d0-2967962dba55" />
+# Requirements
 
-## Features
+*   **System**: Windows 10 or Windows 11.
+*   **Compiler**: A C++ compiler with support for C++17 or newer.
+    *   [MinGW-w64](https://www.mingw-w64.org/) (GCC)
+*   **Build Tools**:
+    *   [CMake](https://cmake.org/download/) (version 3.10 or higher).
+    *   [Ninja](https://github.com/ninja-build/ninja/releases): A fast, small build system.
 
-- Draws boxes around players (enemies and teammates)
-- Displays health bars with color indication (green/yellow/red)
-- Team-based coloring (red for enemies, blue for allies)
-- External overlay window (no code injection)
-- Runs at 144 FPS
+# Build
 
-## How It Works
+```bash
+cmake . -G "Ninja" -B build
+cd build
+ninja -j($env:NUMBER_OF_PROCESSORS)
+```
 
-- Reads CS2 memory externally using `ReadProcessMemory`
-- Retrieves entity list and player information via known offsets
-- Uses the view matrix to convert 3D positions to 2D screen coordinates
-- Renders an always-on-top transparent window using GDI for drawing
+# Usage
+1.  Launch `cs2.exe` and make sure your game is displayed in **Windowed Maximized** mode.
+2.  Download the latest `offsets.json` and `client.dll.json` files from the [a2x/cs2-dumper GitHub repository](https://github.com/a2x/cs2-dumper).
+3.  Place both of the downloaded `.json` files in the **same folder** as the compiled `main.exe`.
+4.  Run `main.exe`, and the ESP should be working.
 
-## Build Instructions
-
-1. Open the project in Visual Studio
-2. Set build target to `x64`
-3. Link against the following libraries:
-   - `User32.lib`
-   - `Gdi32.lib`
-   - `Kernel32.lib`
-4. Compile and run as Administrator
-5. Ensure Counter-Strike 2 is open before launching the tool
-
-## Offsets
-
-Game offsets are defined in `esp.h`. These may need to be updated after CS2 updates. You can find updated offsets using tools like Cheat Engine or community offset dumps.
-
-## Disclaimer
-
-This software is provided for educational and research purposes only.  
-Do not use this in online matchmaking or to gain unfair advantages in multiplayer games.  
-Use of this tool may result in account bans.
+# Credits
+This project is based on the work from [Cr0mb/CS2-Box-ESP](https://github.com/Cr0mb/CS2-Box-ESP/).
